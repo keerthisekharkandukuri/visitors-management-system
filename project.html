@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Tracking</title>
+    <link rel="stylesheet" href="/project.css">
+    <style>
+      .titledetails{
+        margin-left:60px;
+        font-size:22px;
+
+      }
+      .content{
+        font-size:20px;
+        margin-left:30px;
+        margin-top:30px;
+      }
+      .enter{
+        margin-top:60px;
+        margin-left:300px;
+      }
+      .det button{
+        border:none;
+        color:black;
+      }
+      .step{
+        font-size:22px;
+      }
+      .map{
+        display:grid;
+        
+        grid-template-columns:1fr 1fr ;
+        height:500px;
+      }
+      .image{
+        float:left;
+        margin-left:5%;
+        border-radius:5px;
+        margin-top:5px;
+        
+      }
+      .faq-container {
+  max-width: 1000px;
+  height:20px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+    </style>
+ 
+</head>
+<body>
+  <nav class="navbar">
+    <input type="checkbox" id="check">
+    <label for="check" class="check-btn"><i class="fas fa-bars"></i></label>
+    <div id="nav1" >
+      <label class="logo">Visitor Tracking</label>
+      <ul>
+      <li><a class="nav1" href="/about">About</a></li>
+      
+      <li><a href="/securitylogin" target="_blank">securitylogin</a></li>
+
+      <li><a href="/contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <div class="navigation" >
+    <h1 id="first">Welcome to NITAP Visitor management System</h1>
+     
+      
+    </div>
+    <div class="det">
+    <div class="titledetails">
+    <h1>
+      Let's demonstrate you yourself to get in!...</h1>
+    </div>
+    <div class="content">
+    <p>To ensure a smooth check-in process, please provide your details in the form below.</p>
+    </div>
+    <div class="enter">
+    <button style="padding:25px 32px "><a href="/details">Enter Your Details:</a></button>
+    </div>
+    
+    </div>
+    <div class="map">
+    <!-- <h1>Know Where To Go </h1>
+    <p>RoadMap of NitAp</p> -->
+    
+    <div class="image">
+
+    <img style="width:90%" src="keerthi.jpg">
+    </div>
+    <div class="step">
+      <h1>Take a crucial Step to determine a desired route</h1>
+      <h3>click<a href="/area"> here </a>to know the directions of desired place</h3><br>
+      <h3></h3>
+      <!-- <a href="/srk.html">Sarvepalli Radhakrishnan block(srk)</a> -->
+    <a href="/mmm.html"></a>
+     <a href="/guesthouse.html"></a>    
+     <a href="/healthcentre.html"></a>
+     <a href="/sports.html"></a>
+     <a href="/girlshostel.html"></a>
+     <a href="/boyshostel.html"></a>
+     <a href="/centralvista.html"></a>
+     <a href="/library.html"></a>
+     <a href="/vulcanzyground.html"></a>
+
+
+      </div>
+    </div>
+    
+    
+    
+    <div class="process">
+    
+    <img src="visitors management systemAdd a heading.png" alt="process flow">
+    </div>
+  
+    
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">How do I check in as a visitor?</button>
+        <div class="faq-answer">To check in as a visitor, you can use the self-service kiosk at the entrance of the building. Simply follow the on-screen instructions, enter your registration details, and print out your visitor badge. Our staff will be available to assist you if you need any help.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">will the accomadation provided in the campus?</button>
+        <div class="faq-answer">yes,the accomadation will be provided in the guest house</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is the time alloted for visiting?</button>
+        <div class="faq-answer">You can visit the campus 6am to 9 pm</div>
+      </div>
+    </div>
+    <script >
+      const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+  
+    </script>
+
+</body>
+</html>

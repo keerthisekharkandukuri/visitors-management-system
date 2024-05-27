@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Poppins',sans-serif;
+
+      }
+      body{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+  
+        height:1000px;
+      }
+      .form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .outer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      
+      .inner {
+        flex-basis: calc(33.33% - 20px);
+        margin-bottom: 20px;
+      }
+      
+      label {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      input[type="number"],
+      input[type="date"],
+      input[type="time"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      button[type="submit"] {
+        margin-left:150px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+      
+      button[type="submit"] i {
+        margin-right: 50px;
+      }
+      </style>
+    
+    </head>
+<body>
+    <div class="form">
+        <form action="/update" method="post">
+          <div class="outer">
+            <div class="inner">
+              <label>Enter the visitor ID:</label>
+              <input name="visitorId" type="number" required>
+            </div>
+            <div class="inner">
+              <label for="checkoutTime">Checkout Time:</label>
+              <input type="time" name="destination_time" id="checkoutTime" required>
+            </div>
+            <div class="inner">
+              <label>Checkout Date:</label>
+              <input type="date" name="destination_date" required>
+            </div>
+            <button type="submit"><i class="fas fa-save"></i> Update Checkout Time</button>
+          </div>  
+        </form>
+      </div>
+      
+      
+      <!-- Include Font Awesome for the save icon -->
+      <script src="https://kit.fontawesome.com/72b58d0c28.js" crossorigin="anonymous"></script>
+      
+</body>
+</html>

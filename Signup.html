@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Styles for the form container */
+*{
+/*   */
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+}
+
+
+body{
+  background-image: url('/img123.jpg');
+  margin:0;
+  width: 100%;
+  height: 120vh;
+  background-size: 100% 150vh;
+         position: relative;
+          background-repeat: no-repeat;
+            
+        display:flex;
+            align-items:center;
+            color:black;
+          /* background-color:white;  */
+            justify-content: center;
+            
+
+          }
+          .form{
+            opacity: 0.75;
+           background-color: white;
+            width:450px;
+            height:650px;
+            padding:10px 25px 35px 35px;
+            margin-left:0px;
+            /* margin-top:120px; */
+            border-radius:20px;
+            /* background-color:#23242a; */
+            font-family: sans-serif;
+            font-weight:700;
+             /* background-color:white; */
+            
+            align-items:center;
+            
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+            display: flex;
+            justify-content: center;
+
+          }
+          .total{
+            width:100%;
+            /* padding:2px 5px 0px 5px; */
+            display: flex;
+  justify-content: center;
+  flex-direction:column;
+          }
+          .total input{
+          
+            width: 20rem;
+    background-color: transparent;
+    border: 0px;
+    border: transparent;
+    margin: 20px;
+    /* padding: 10px; */
+    font-size: 18px;
+    border-bottom: 2px solid black;
+    box-sizing :border-box;
+          }
+          .total  input ~ label{
+    position: absolute;
+    left: 20px;
+    transition: 0.9s ease-in-out;
+    margin-top: 10px;
+    margin-left:10px;
+    padding-left:1000px;
+}
+
+.total  input:focus ~ label{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+     /* .form .submit{
+            outline:none;
+            border:none;
+            width:40%;
+            height:60px;
+            border-radius:30px;
+            color:#fff;
+            font-size:20px;
+            font-weight:700;
+            text-align:center;
+             background-image:linear-gradient(to right,#485563 0%,#29323c 51%,#485563 100%); 
+            background-size:200%;
+            
+                      
+            transition:5s; 
+          } */
+           .submit{
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            width: 100px;
+            height: 35px;
+            margin-left: 109px;
+           
+          
+
+          }
+          /* .submit:hover{
+             background-position:right;
+          } */
+      
+
+        </style>
+    </head>
+    <body>
+      
+        <div class="form">
+         <form action="/Signup" method="post" class="signup">
+            <div class="total">
+            <div class="box">
+            <label>Enter your name</label><br>
+            <input type="text" name="name" placeholder="Enter your name"><br>
+        </div>
+            <div class="box">
+            <label>Enter your Security ID</label><br>
+            <input type="number" name="id_1" placeholder="Enter your security ID"><br>
+        </div>
+        <div class="box">
+            <label>Enter Your Phone number</label><br>
+            <input type="number" name="phone_number" placeholder="Enter your phone number"><br>
+        </div>
+        <div class="box">
+            <label>Enter Your Address</label><br>
+            <input type="text" name="address" placeholder="Enter your address"><br>
+        </div>
+        <div class="box">
+            <label >Enter Your hiredate</label><br>
+            <input type="date" name="date" placeholder="Enter your hire-date"><br>
+        </div>
+        <div class="box">
+            <label>Enter Your password</label><br>
+            <input type="text" name="password" placeholder="Enter your password"><br>
+        </div> 
+        <div >
+            <button type="submit" class="submit">Sign Up</button>
+            
+         </div> 
+         <p style="margin-top: 10px;margin-left: 25px;">Already have an account?<a href="/securitylogin">Login</a></p> 
+        </div>
+        </form> 
+    
+            
+
+        
+         </div>
+         <script>
+          const form = document.querySelector('form');
+  const securityIdInput = document.querySelector('input[name="id_1"]');
+  
+  form.addEventListener('submit', (event) => {
+    if (securityIdInput.value.length !== 6) {
+      event.preventDefault();
+      alert('Security ID should be of length 6');
+    }
+  });
+  
+        </script>
+    </body>
+</html>

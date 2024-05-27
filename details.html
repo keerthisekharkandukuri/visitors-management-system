@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details of visitor</title>
+    
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Poppins',sans-serif;
+
+      }
+      body{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+  
+        height:1000px;
+      
+      }
+      .form{
+        width:1200px;
+        border-radius:5px;
+        background-color:#f2f2f2;
+        padding:20px;
+        display:grid;
+            align-items:center;
+            grid-template-columns:1fr 1fr 1fr;
+            grid-gap:15px;
+        
+      }
+      input ,select{
+        padding:10px;
+        margin:8px 0;
+        display:inline-block;
+        border:1px solid #ccc;
+        border-radius:4px;
+        box-sizing:border-box;
+
+      }
+      .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  grid-gap: 16px; /* Gap between columns */
+}
+
+    </style>
+</head>
+<body>
+  <div class="details">
+    <div class="form">
+      <div class="image">
+        <img src="friendly-receptionists-from-hotel-registration-desk-help-clients_74855-4420.jpg">
+      </div>
+<form action="/details" method="post" id="form" enctype="multipart/form-data" class="grid" >
+  
+    <div class="col1">
+   
+    <div class="inputbox">
+      <label>Enter your name</label><br>
+      <input type="text" name="visitor_name"  id="name" required><br>
+      
+      <i></i>
+      </div>
+    <div class="inputbox">
+    <label>Enter your phonenumber</label><br>
+    <input type="number" name="phone_number"  id="ph_num" required><br>
+    <i></i>
+    </div>
+    <div class="inputbox">
+    <label>Enter host name:</label><br>
+    <input type="text" name="host_name" id="hostname" required><br>
+    <i></i>
+    </div>
+    <div class="inputbox">
+    <label>Enter host phone number:</label><br>
+    <input type="number" name="phone"  id="host_num" required><br>
+    <i></i>
+    </div>
+    <div class="inputbox">
+    <label >destination within college:</label><br>
+    <input type="text" name="destination" id="dest" required><br>
+    <i></i>
+    </div>
+    </div>
+    <div class="col2">
+    <div class="inbox">
+      <label>
+          Enter Host Email
+      </label><br>
+      <input type="email" name="email" required><br>
+    </div>
+    <div class="inputbox">
+    <label>Enter Date of arrival</label><br>
+    <input type="date" name="arrival_date" required> <br>
+    <i></i>
+    </div>
+    
+    <div class="inputbox">
+      <label>Enter time of arrival</label><br>
+      <input type="time" name="arrival_time" id="arrival_time" required><br>
+      <i></i>
+    </div>
+    <div class="inputbox">
+      <label>Purpose Of Visit</label><br>
+      <input type="text" name="purpose" id="purpose" required><br>
+      <i></i>
+    </div>
+    
+    <div class="inputbox">
+      <label for="img">Select image:</label><br>
+      <input type="file" id="img" name="img" accept="image/*"><br>
+    </div>
+    <div class="inputbox">
+      <label for="category" >Enter Your Category</label><br>
+      <select name="category" ><br>
+        <option value="parent">Parent</option>
+        <option value="guardian">Guardian</option>
+        <option value="Interviewer">Interviewer</option>
+      </select>
+    </div>
+
+    
+   
+    </div>
+    <div class="submit">
+      <button style="padding:7px;" onclick="validateForm()" type="submit">Check In</button>
+
+    </div>
+
+
+</form>
+</div>
+</div>
+<script>
+  function validateForm() {
+    const phoneNumber = document.getElementById("phone_number").value;
+    if (!validatePhoneNumber(phoneNumber)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return false;
+    }
+  }
+  function validatePhoneNumber(phoneNumber) {
+  const phonePattern = /^\d{10}$/; 
+  return phonePattern.test(phoneNumber);
+}
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
